@@ -54,11 +54,11 @@ const DisplaySystemInfo = () => {
 
     return (
         <div className="flex justify-center items-center h-screen">
-            <div className="flex flex-col items-center w-full  px-8">
-                <p className="text-3xl text-gradient font-bold font-mont mb-4">Bound Finance | Crypto Side</p>
+            <div className="flex flex-col items-center w-full max-w-xl px-8">
+                <p className="text-3xl text-gradient font-bold font-mont mb-4">Bound Finance (Testnet) | Crypto Side</p>
                 <p className="font-mont text-2xl break-normal text-purple-400 mb-8">System Information</p>
     
-                <div className="flex flex-row items-center justify-center gap-16 flex-wrap mb-8">
+                <div className="flex flex-row items-center justify-center gap-8 flex-wrap mb-8">
                     <div className="text-center">
                         <p className="font-mont text-xl text-skyblue mb-2">Total Interest Distributed</p>
                         <p className="text-gray-300 font-bold font-Helvetica text-4xl">~{interestDistributed} ETH</p>
@@ -73,14 +73,14 @@ const DisplaySystemInfo = () => {
                     </div>
                 </div>
     
-                <div>
-                <Link to="/bcketh" className="BoxGradient-buttons drop-shadow-xl hover:text-white">
-                Get Started
-                </Link>
-
+                <div className="flex justify-center items-center w-full mt-8">
+                    <Link to="/bcketh" className="BoxGradient-buttons drop-shadow-xl hover:text-white py-2 px-4 rounded">
+                        Get Started
+                    </Link>
                 </div>
             </div>
         </div>
     );
-    }    
+};   
 export default DisplaySystemInfo;
+
