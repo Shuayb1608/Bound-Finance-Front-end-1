@@ -1,0 +1,124 @@
+
+.btn-gradient {
+  /* background: linear-gradient(91.25deg, #17dafb 1.07%, #2262c2 79.61%); */
+  /* background: linear-gradient(
+    90deg,
+    rgba(96, 195, 234, 1) 0%,
+    rgba(78, 114, 162, 1) 50%,
+    rgba(51, 56, 87, 1) 100%
+  ); */
+  /* background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
+  /* background: radial-gradient(circle, rgba(18,18,18,1) 0%, rgba(116,11,106,1) 100%); */
+  background: linear-gradient(190deg, rgba(34,193,195,1) 0%, rgba(116,11,106,0.8547794117647058) 100%)
+}
+
+.border-gradient {
+  background: linear-gradient(90deg, #17dafb, #2262c2);
+}
+
+/* Replace these values with your desired gradient colors */
+/* :root {
+  --gradient-color-1: #ff00aa;
+  --gradient-color-2: #00aaff;
+} */
+
+.underline-gradient {
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-position: under;
+  background-color: linear-gradient(90deg, #17dafb, #2262c2);
+  text-decoration-color: linear-gradient(90deg, #17dafb, #2262c2);
+  bottom: 0;
+  left: 0;
+  right: 0; 
+}
+
+.gradient-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff; /* Set your desired button text color */
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gradient-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Adjust the height of the underline as needed */
+  background-image: linear-gradient(to right, #007bff, #00ff00); /* Replace the colors with your desired gradient */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.gradient-button::after {
+  transform: scaleX(1);
+}
+
+
+.card-backgorund {
+background: radial-gradient(circle, rgba(62, 62, 62, 0.61), rgba(62, 62, 62, 1));
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(16.8px);
+-webkit-backdrop-filter: blur(16.8px);
+border: 1px solid rgba(62, 62, 62, 1);
+}
+
+.BoxGradient-buttons {
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #262121;
+  transition: color 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  background: linear-gradient(
+    190deg,
+    rgb(114, 242, 244) 0%,
+    rgba(116, 11, 106, 0.8547794117647058) 100%
+  );
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+.navbar-theme {
+  background: rgba(18, 18, 18, 0.51);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+}
+.text-gradient {
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(circle, #fff, rgba(255, 255, 255, 0.35));
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.BoxGradient-buttons:hover {
+  color: white;
+}
+
+
+.cards_box{
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(13.6px);
+  -webkit-backdrop-filter: blur(13.6px);
+}
+
+.cup-list-container {
+  display: none;
+  overflow-y: auto; /* Add vertical scrollbar if necessary */
+  max-height: 300px; /* Adjust based on your needs */
+}
+.bold {
+  font-weight: bold;
+}

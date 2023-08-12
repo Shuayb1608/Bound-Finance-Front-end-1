@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import { approveChanges } from "./Functions";
+import Swal from "sweetalert2";
+
+export default function TreasuryApproveChange() {
+  const [ID, setID] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleOnChange = (e) => {
+    setID(e.target.value);
+  };
+  const handleApproveChange = async () => {
+    setIsLoading(true);
+   
+      await approveChanges(ID);
+     
+   
+    setIsLoading(false);
+  };
+
+  const Cards_Data = [
+    {
+      id: 1,
+      heading: "Approve Proposal Change",
+      title: "Proposal ID",
+      inputTitle: "0",
+      button: "Approve",
+      onChangeInput: handleOnChange,
+      onClick: handleApproveChange,
+    },
+  ];
+
+  return (
+    <div>
+      {Cards_Data.map((item, index) => {
+        return (
+          <div key={index} className="card-backgorund p-3">
+            <p className="text-24 font-bold font-mont text-center">
+              {item.heading}
+            </p>
+            <div className="flex flex-col gap-2 mt-3">
+              <p>{item.title}:</p>
+              <input
+                type="number"
+                onChange={(e) => item.onChangeInput(e)}
+                placeholder={item.inputTitle}
+                className="rounded-md text-14 bg-transparent focus:ring-2 outline-none border py-2 px-3"
+              />
+              <button
+                onClick={item.onClick}
+                className="BoxGradient-buttons drop-shadow-xl hover:drop-shadow-sm"
+              >
+                {item.button}
+              </button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
