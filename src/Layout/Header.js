@@ -7,7 +7,7 @@ import WalletConnect from "../components/WalletConnect";
 const Nav_Links = [
   {
     id: 1,
-    title: "Create BCKETH",
+    title: "CREATE BCKETH",
     path:"/bcketh",
   },
   {
@@ -17,17 +17,17 @@ const Nav_Links = [
   },
   {
     id: 2,
-    title: "Staking BCK",
+    title: "STAKING BCK",
     path: '/staking',
   },
   {
     id: 3,
-    title: "Treasury DAO",
+    title: "TREASURY DAO",
     path: "/dao",
   },
   {
     id: 4,
-    title: "Liquidation",
+    title: "LIQUIDATION",
     path: "/liquidation",
   },
 ];
@@ -44,21 +44,18 @@ export default function Header() {
                 className="text-decoration-none hover:text-white-200 font-mont flex flex-col items-end leading-none"
                 to={"/"}
               >
-                
-                <p className="text-30  " style={{
-                  fontWeight: 600,
-                }}>Bound.</p>
+                <p className="text-30" style={{ fontWeight: 600 }}>Bound.</p>
                 <p className="text-[#35beff] tracking-[4px] text-15 pt-[2px]">Finance</p>
               </NavLink>
             </div>
+            <p className="text-red-400 text-18 mr-6">(Testnet)</p>
             <div className="items-center gap-4 font-dm-sans font-semibold hidden md:flex">
               {Nav_Links.map((items, index) => {
                 return (
                   <div key={index}>
                     <NavLink
                       to={items.path}
-                      className="text-decoration-none text-nav-links hover:text-[#fff] text-12"
-    
+                      className="text-decoration-none text-nav-links hover:text-[#fff] text-13 whitespace-nowrap"
                     >
                       {items.title}
                     </NavLink>
@@ -68,7 +65,7 @@ export default function Header() {
             </div>
           </div>
           <div>
-          <WalletConnect />
+            <WalletConnect />
           </div>
         </div>
       </div>
